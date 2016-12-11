@@ -123,7 +123,7 @@ def fiemap(fd, start=0, length=_UINT64_MAX, flags=0, count=0):
         offset += _struct_fiemap_extent.size
 
     if fm_extents:
-        assert fm_extents[-1].flags | FIEMAP_EXTENT_LAST == FIEMAP_EXTENT_LAST
+        assert fm_extents[-1].flags & FIEMAP_EXTENT_LAST == FIEMAP_EXTENT_LAST
 
     return _fiemap(
         fm_start, fm_length, fm_flags, fm_mapped_extents, fm_extent_count,
