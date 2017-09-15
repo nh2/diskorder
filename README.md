@@ -117,6 +117,11 @@ tar in disk order  16 seconds
   about the topic that includes a `tar` benchmark,
   and corresponding [presentation](http://www.linux-kongress.org/2009/slides/linux_disk_io_performance_havard_espeland.pdf)
   from Linux-Congress.
+  * After I asked the authors for it, they kindly released the source code of their [`qtar`](https://github.com/chlunde/qtar) implementation.
 * [This blog post](http://dkrotx-prg.blogspot.ch/2012/08/speedup-file-reading-on-linux.html) by dkrotx.
 * [Nicolas Trangez (@NicolasT)](https://gist.github.com/NicolasT)
   from whose [Gist I took the initial `fiemap.py`](https://gist.github.com/NicolasT/1237401).
+
+## Similar work
+
+* [platter-walk](https://github.com/the8472/platter-walk) - Rust library for HDD-aware directory traversal
