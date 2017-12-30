@@ -125,3 +125,4 @@ tar in disk order  16 seconds
 ## Similar work
 
 * [platter-walk](https://github.com/the8472/platter-walk) - Rust library for HDD-aware directory traversal
+* coretuils `rm -r` and other coreutils programs [sort files by inode order](http://git.savannah.gnu.org/cgit/coreutils.git/commit/?id=24412edeaf556a) before operating on them
