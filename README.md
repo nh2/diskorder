@@ -126,3 +126,6 @@ tar in disk order  16 seconds
 
 * [platter-walk](https://github.com/the8472/platter-walk) - Rust library for HDD-aware directory traversal
 * coretuils `rm -r` and other coreutils programs [sort files by inode order](http://git.savannah.gnu.org/cgit/coreutils.git/commit/?id=24412edeaf556a) before operating on them
+  * However, I [found](https://bugs.python.org/issue32453#msg309303) that `rm -r` is still quadratic
+* The authors of the [HTree](https://en.wikipedia.org/wiki/HTree) method that's used in `ext4` [write](http://ext2.sourceforge.net/2005-ols/paper-html/node3.html):
+    > [...] it could cause some performance regressions for workloads that used readdir() to perform some operation of all of the files in a large directory [...] This performance regression can be easily fixed by modifying applications to **sort the directory entries** returned by readdir() **by inode number**
